@@ -27,7 +27,7 @@ public class OSSController {
         String uuid = UUID.randomUUID().toString().replace("-", "");
 
         String fileName = file.getOriginalFilename();
-        String url = "https://123.56.26.82:11111/OSS/delivery/download?uuid=" + uuid + "&" + "fileName=" + fileName;
+        String url = "https://123.56.26.82:8443/OSS/delivery/download?uuid=" + uuid + "&" + "fileName=" + fileName;
 
         String prefix = uuid.substring(0, 15);
         String suffix = uuid.substring(16);
@@ -59,7 +59,7 @@ public class OSSController {
         File file = new File(filePath);
 
         if (file.exists()) {
-            response.setContentType("appliacation/octet-stream;charset=UTF-8");
+            response.setContentType("application/octet-stream;charset=UTF-8");
             response.setContentLength((int) file.length());
 
             try {
@@ -75,6 +75,11 @@ public class OSSController {
                 e.printStackTrace();
             }
         }
+    }
+
+    @RequestMapping("lzuo")
+    String index() {
+        return "lzuo";
     }
 
 }
