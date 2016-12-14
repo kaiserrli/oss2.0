@@ -1,7 +1,7 @@
 src/main/resources/META-INF/
 target/
-!.mvn/wrapper/maven-wrapper.jar
-
+.mvn/
+log.log
 ### STS ###
 .apt_generated
 .classpath
@@ -23,3 +23,5 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+src/main/resources/static/
+src/main/resources/templates/
